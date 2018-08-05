@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Las Iguanas",
+    "position": {
+    "lat": 51.452662,
+    "lng": -0.970905
+    }
+  },
+  {
+    "name": "Slug and Lettuce",
+    "position": {
+      "lat": 51.453590,
+      "lng": -0.970821
+    }
+  },
+  {
+    "name": "The Purple Turtle",
+    "position": {
+      "lat": 51.453983,
+      "lng": -0.972965
+    }
+  },
+  {
+    "name": "All Bar One",
+    "position": {
+      "lat": 51.453510,
+      "lng": -0.970925
+    }
+  },
+  {
+    "name": "The Beach Bar",
+    "position": {
+      "lat": 51.453005,
+      "lng": -0.970821
+    }
+  }
+]
