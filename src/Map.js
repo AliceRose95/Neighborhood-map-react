@@ -1,85 +1,64 @@
 import React, { Component } from 'react';
-import { withGoogleMap, GoogleMap, Marker, withScriptjs } from 'react-google-maps';
+import { compose, withProps, withStateHandlers } from 'recompose';
+import { getLocations } from './foursquareAPI';
+import placeInfo from './places.json';
+import { withGoogleMap, GoogleMap, Marker, withScriptjs, InfoWindow} from 'react-google-maps';
 
 class Map extends Component {
-  state = {
-    places: [
-      {
-        "name": "Las Iguanas",
-        "position": {
-        "latitude": 51.452662,
-        "longitude": -0.970905
-      }
-      },
-      {
-        "name": "Slug and Lettuce",
-        "position": {
-        "latitude": 51.453590,
-        "longitude": -0.970821
-      }
-      },
-      {
-        "name": "The Purple Turtle",
-        "position": {
-        "latitude": 51.453983,
-        "longitude": -0.972965
-      }
-      },
-      {
-        "name": "All Bar One",
-        "position": {
-        "latitude": 51.453510,
-        "longitude": -0.970925
-      }
-      },
-      {
-        "name": "The Beach Bar",
-        "position": {
-        "latitude": 51.453005,
-        "longitude": -0.970821
-      }
-      },
-      {
-        "name": "The Pavlovs Dog",
-          "position": {
-            "latitude": 51.454391,
-            "longitude": -0.974740
-      }
+  constructor(props) {
+        super()
     }
-  ],
-}
 
-
-  render(){
-    const MapWithMarkers = withGoogleMap(props => (
-      <GoogleMap
-        defaultCenter = { { lat: 51.453004, lng: -0.970946 } }
-        defaultZoom = { 17 }
-      >
-      {this.state.places.map((place, index) => (
+  render() {
+    const places = placeInfo;
+    const MapWithMarkers = compose(
+      withStateHandlers(() => ({
+        isOpen: false,
+      }), {
+      onToggleOpen: ({ isOpen }) => () => ({
+        isOpen: !isOpen,
+      }),
+      showInfo: ({ showInfo,isOpen }) => (a) => ({
+        isOpen: !isOpen,
+        showInfoIndex: a
+      })
+    }),
+    withScriptjs,
+    withGoogleMap
+  )(props =>
+    <GoogleMap
+      defaultCenter = { { lat: 51.453004, lng: -0.970946 } }
+      defaultZoom = { 17 }
+    >
+    {places.map((place, id) => (
       <Marker
-          key={place.name}
-          position={{ lat: place.position.latitude, lng: place.position.longitude }}
-          title={place.name}
+        position={{ lat: place.position.latitude, lng: place.position.longitude }}
+        title={place.name}
+        key={place.id}
+        placeId={place.venueId}
+        onClick={()=>{ props.showInfo(id)} }
       >
+        {(props.showInfoIndex == id ) &&  <InfoWindow onCloseClick={props.onToggleOpen}>
+          <div>Test</div>
+        </InfoWindow>}
       </Marker>
       ))}
-      </GoogleMap>
-   ));
+    </GoogleMap>
+  );
 
 
    return(
-      <div>
-        <header>
-        <h1>Readings Best Bars Map</h1>
-        </header>
-        <MapWithMarkers
-          containerElement={ <div style={{ height: `100%`, width: `100%` }} /> }
-          mapElement={ <div style={{ height: `100vh` }} /> }
-        />
-
-      </div>
+     <div>
+     <MapWithMarkers
+       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj9wwQEOPRL67fzUS2F7Kod97Gok6ggVE"
+       loadingElement={<div style={{ height: `100%` }} />}
+       containerElement={ <div style={{ height: `100%`, width: `100%` }} /> }
+       mapElement={ <div style={{ height: `100vh` }} /> }
+     />
+     </div>
    );
    }
 };
+
+
 export default Map;

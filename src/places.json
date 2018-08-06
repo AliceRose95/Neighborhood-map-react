@@ -1,37 +1,56 @@
 [
   {
+    "id": "1",
     "name": "Las Iguanas",
+    "area": "riverside",
     "position": {
-    "lat": 51.452662,
-    "lng": -0.970905
+    "latitude": 51.452662,
+    "longitude": -0.970905
     }
   },
   {
+    "id": "2",
     "name": "Slug and Lettuce",
+    "area": "riverside",
     "position": {
-      "lat": 51.453590,
-      "lng": -0.970821
+      "latitude": 51.453590,
+      "longitude": -0.970821
     }
   },
   {
+    "id": "3",
     "name": "The Purple Turtle",
+    "area": "town",
     "position": {
-      "lat": 51.453983,
-      "lng": -0.972965
+      "latitude": 51.453983,
+      "longitude": -0.972965
     }
   },
   {
+    "id": "4",
     "name": "All Bar One",
+    "area": "riverside",
     "position": {
-      "lat": 51.453510,
-      "lng": -0.970925
+      "latitude": 51.453510,
+      "longitude": -0.970925
     }
   },
   {
+    "id": "5",
     "name": "The Beach Bar",
+    "area": "riverside",
     "position": {
-      "lat": 51.453005,
-      "lng": -0.970821
+      "latitude": 51.453005,
+      "longitude": -0.970821
     }
+  },
+  {
+    "id": "6",
+    "name": "The Pavlovs Dog",
+    "area": "town",
+      "position": {
+        "latitude": 51.454391,
+        "longitude": -0.974740
   }
+}
 ]

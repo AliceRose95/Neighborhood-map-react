@@ -21,3 +21,22 @@ h1 {
   padding-top: 10px;
   color: #fff;
 }
+
+.sidebar {
+  float: left;
+  width: 200px;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.sidebar ul, .sidebarList {
+  padding: 0 0 0 20px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  text-align: left;
+  padding: 20px 0 20px 0;
+  font-size: 15pt;
+}
