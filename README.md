@@ -14,6 +14,7 @@ This app is a neighbourhood map showing all the main bars and pubs in Reading to
 This app was made primarily using [react-google-maps](https://github.com/tomchentw/react-google-maps)
 
 [escape-string-regexp](https://github.com/sindresorhus/escape-string-regexp)
-[font-awesome]('https://fontawesome.com/')
+
+[font-awesome]('https://fontawesome.com')
 
 External data was gathered with Foursquare
