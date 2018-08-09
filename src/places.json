@@ -2,7 +2,6 @@
   {
     "id": "4bf58bdbbfeac9282aaf9236",
     "name": "Las Iguanas",
-    "area": "riverside",
     "position": {
     "latitude": 51.452662,
     "longitude": -0.970905
@@ -11,7 +10,6 @@
   {
     "id": "4b9c1b45f964a520b74a36e3",
     "name": "Slug and Lettuce",
-    "area": "riverside",
     "position": {
       "latitude": 51.453590,
       "longitude": -0.970821
@@ -20,7 +18,6 @@
   {
     "id": "4ae3711cf964a520269521e3",
     "name": "The Purple Turtle",
-    "area": "town",
     "position": {
       "latitude": 51.453983,
       "longitude": -0.972965
@@ -29,7 +26,6 @@
   {
     "id": "4d8b6da9f6528eecda3d961b",
     "name": "All Bar One",
-    "area": "riverside",
     "position": {
       "latitude": 51.453510,
       "longitude": -0.970925
@@ -38,7 +34,6 @@
   {
     "id": "5972162b029a55583a3af370",
     "name": "The Beach Bar",
-    "area": "riverside",
     "position": {
       "latitude": 51.453005,
       "longitude": -0.970821
@@ -47,10 +42,33 @@
   {
     "id": "4b8ee996f964a520473e33e3",
     "name": "The Pavlovs Dog",
-    "area": "town",
       "position": {
         "latitude": 51.454391,
         "longitude": -0.974740
   }
+},
+{
+  "id": "4b7ee470f964a520610730e3",
+  "name": "The Hope Tap",
+    "position": {
+      "latitude": 51.456564,
+      "longitude": -0.975389
+    }
+},
+{
+  "id": "4be5d1aa2468c9281c9b0043",
+  "name": "The Ale House",
+    "position": {
+      "latitude": 51.455256,
+      "longitude": -0.970252
+    }
+},
+{
+  "id": "51f950ae498e559718222541",
+  "name": "Wild Lime",
+    "position": {
+      "latitude": 51.456800,
+      "longitude": -0.971343
+    }
 }
 ]
